@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: #07060d;
+  --color-bg-warm: #120c1e;
+  --color-surface: #12101a;
+  --color-surface-2: #1a1626;
+  --color-ink: #f7f5ff;
+  --color-ink-soft: #c8c2d8;
+  --color-muted: #8d86a3;
+  --color-subtle: #6f6882;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(167, 139, 250, 0.35);
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-accent-fg: #ffffff;
+  --color-accent-soft: rgba(124, 58, 237, 0.18);
+  --color-pass: #5ee0a0;
+  --color-pass-soft: rgba(94, 224, 160, 0.12);
+  --color-warn: #f0b44a;
+  --color-warn-soft: rgba(240, 180, 74, 0.12);
+  --color-fail: #ff7b72;
+  --color-fail-soft: rgba(255, 123, 114, 0.12);
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.125rem;
+  --radius-xl: 1.75rem;
+
+  --shadow-card:
+    0px 0px 0px 1px rgba(26, 24, 20, 0.06),
+    0px 1px 2px -1px rgba(26, 24, 20, 0.06),
+    0px 2px 4px 0px rgba(26, 24, 20, 0.04);
+  --shadow-card-hover:
+    0px 0px 0px 1px rgba(26, 24, 20, 0.08),
+    0px 1px 2px -1px rgba(26, 24, 20, 0.08),
+    0px 2px 8px 0px rgba(26, 24, 20, 0.06);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes rankwise-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rankwise-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

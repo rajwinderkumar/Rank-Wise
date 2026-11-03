@@ -1,0 +1,23 @@
+Rank Wise — upload these 3 files only
+=====================================
+
+Upload ALL of these to the ROOT of your GitHub repo (Rank-Wise):
+
+  1. index.html
+  2. history.html
+  3. favicon.svg
+
+Do NOT put them inside another folder.
+
+Steps:
+1. Open https://github.com/rajwinderkumar/Rank-Wise
+2. Add file → Upload files
+3. Drag index.html, history.html, favicon.svg
+4. Commit to main
+5. Settings → Pages → Branch: main / folder: / (root)
+6. Open https://rajwinderkumar.github.io/Rank-Wise/
+
+CSS and JavaScript are already inside index.html and history.html.
+You do not need css/ or js/ folders.
+
+Sample report works without a server.
